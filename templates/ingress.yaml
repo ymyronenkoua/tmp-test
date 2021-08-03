@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test-v.apps.devtest-avalaunch.aval
+  namespace: {{ .Values.namespace }}
+spec:
+  rules:
+  - host: test-v.apps.devtest-avalaunch.aval
+    http:
+      paths:
+      - backend:
+          serviceName: sevice-nginx
+          servicePort: 80
+        path: /

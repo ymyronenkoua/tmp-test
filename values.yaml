@@ -1,1 +1,8 @@
-namespace: test
+global:
+  namespace: test-ns-l4
+  containerPort: 80
+service:
+  port: 80
+  targetPort: 80
+ingress:
+  port: 80
